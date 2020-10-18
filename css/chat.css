@@ -1,0 +1,449 @@
+/*---------LAYOUT---------*/
+.sidebar {
+    background: white;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    border-right: 1.3px solid #c9c9c9;
+    padding-top: 7%;
+    min-width: 330px;
+}
+
+.header {
+    background: white;
+    border-bottom: 1.3px solid #c9c9c9;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.chat-content {
+    background: white;
+    border-right: 1.3px solid #c9c9c9;
+    grid-row-start: 2;
+    grid-row-end: 5
+}
+
+.conversation-ava {
+    background: white;
+    border-bottom: 1.3px solid #c9c9c9;
+}
+
+.conversation-info {
+    background: white;
+    border-bottom: 1.3px solid #c9c9c9;
+}
+
+.member-list {
+    background: white
+}
+
+.test {
+    font-size: 2rem
+}
+
+.chat-wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 3fr 6fr 4fr;
+    grid-template-rows: 0.5fr 1fr 1fr 3fr;
+}
+
+/*---------SIDE BAR---------*/
+
+.my-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0 7% 0;
+}
+
+.my-profile > img {
+    width: 80px;
+    border-radius: 100px;
+    margin-right: 10px
+}
+
+.my-profile .info {
+    position: relative;
+}
+
+.auth-user-name {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #272727;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.auth-user-name > div {
+    display: flex;
+    align-items: center
+}
+
+.arrow-icon {
+    width: 15px;
+    height: 9px;
+    margin-left: 5px
+}
+
+.my-profile .info > p:last-child {
+    font-size: .9rem;
+    color: #929292
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    background: white;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px 0 10px;
+    display: none;
+}
+
+.auth-user-name:hover .sidebar-nav {
+    display: block;
+}
+
+.sidebar-nav li {
+    list-style: none;
+    padding: 10px 20px 10px;
+    font-size: .96rem;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+    font-weight: 400
+}
+
+.sidebar-nav li:hover {
+    background: #F3F3F3;
+}
+
+.sidebar-nav li:last-child {
+    display: flex
+}
+
+.sidebar-nav li img {
+    margin-right: 5px
+}
+
+
+/*-------*/
+
+.search-conversation {
+    position: relative;
+    padding: 0 7% 0;
+    margin: 20px 0px 20px;
+}
+
+.search-conversation input {
+    width: 100%;
+    height: 35px;
+    background: #F3F3F3;
+    border: none;
+    border-radius: 50px;
+    padding-left: 50px;
+    color: #272727;
+    transition: .2s ease-in-out;
+}
+
+.search-conversation input:focus {
+    background: white;
+    outline: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14)
+}
+
+.search-conversation ::placeholder {
+    font-size: .94rem;
+
+}
+
+.search-conversation img {
+    width: 25px;
+    position: absolute;
+    top: 6px;
+    left: 35px
+}
+
+/*-----CONVERSATIONS-----*/
+
+.conversations-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*    margin-bottom: 10px;*/
+    padding: 0 7% 0;
+}
+
+.conversations-header div:first-child {
+    font-weight: 500;
+    opacity: .5
+}
+
+.conversations-header div:last-child {
+    font-size: 2rem;
+    background: #6BA6FF;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
+    transition: .2s ease-in-out;
+}
+
+.conversations-header div:last-child:hover {
+    /*    transform: translateY(-4px);*/
+    cursor: pointer;
+    background: #4891ff;
+    box-shadow: 0px 7px 18px rgba(0, 0, 0, 0.3);
+}
+
+.conversation-item {
+    display: flex;
+    align-items: center;
+    padding: 7px 7% 7px;
+    transition: .1s ease-in-out;
+    cursor: pointer
+}
+
+.conversation-item > *{
+    pointer-events: none;
+}
+
+.conversation-item:hover {
+    background: #F3F3F3
+}
+
+.conversation-item > img {
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+}
+
+.conversation-item-name {
+    font-weight: 400;
+    color: #272727;
+    font-size: 1.1rem;
+    margin-bottom: 4px
+}
+
+.conversation-item-message {
+    color: #929292;
+    font-size: .95rem;
+}
+
+/*-----------HEADER--------*/
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header-info {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-info h1 {
+    font-size: 1.5rem;
+    font-weight: 500
+}
+
+.header-info p {
+    color: #929292;
+    font-size: .95rem
+}
+
+/*-----*/
+
+.header-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px
+}
+
+.header-btn > a {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.header-btn a:first-child > img {
+    height: 30px
+}
+
+.header-btn a:last-child > img {
+    height: 25px;
+    padding: 0 5px 0
+}
+
+/*--------CONTENT--------*/
+
+.chat-content {
+    display: grid;
+    grid-template-rows: 1fr 50px 15px;
+}
+
+/*-------------*/
+
+
+.chat-content-wrapper {
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-top: 4%;
+}
+
+.chatbox-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.chatbox {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-areas: 
+        "ava time"
+        "ava content";
+    grid-column-gap: 10px;
+    margin-bottom: 15px;
+    padding: 0 4%;
+    /* justify-items: start; */
+}
+
+.chatbox-message {
+    font-size: .95rem;
+}
+
+.mine {
+    grid-template-columns: 1fr 40px;
+    grid-template-areas: 
+        "time ava"
+        "content ava";
+    justify-items: end
+}
+
+.chatbox .chatbox-thumb {
+    grid-area: ava;
+}
+
+.chatbox .time-stamp {
+    font-size: .9rem;
+    color: #B2B2B2
+}
+
+.deleteBtn {
+    font-weight: 500;
+    color: #C9C9C9;
+    cursor: pointer;
+    padding: 7px;
+    visibility: hidden;
+}
+
+.deleteBtn:hover {
+    color: #929292;
+}
+
+.chatbox-message-wrapper:hover .deleteBtn {
+    visibility: visible;
+}
+
+.their .deleteBtn {
+    visibility: hidden !important;
+}
+
+.their .chatbox-message {
+    background: #F2F6F9;
+    padding: 7px 15px;
+    border-radius: 5px 15px 15px 15px;
+    display: inline-block;
+}
+
+.their .chatbox-message-wrapper {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+}
+
+.their .chatbox-message-wrapper {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+}
+
+.mine .chatbox-message {
+    background: #6BA6FF;
+    padding: 7px 15px;
+    border-radius: 15px 5px 15px 15px;
+    color: white;
+    display: inline-block;
+    grid-column: 3/4;
+}
+
+.mine .chatbox-message-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+}
+
+.mine .deleteBtn {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+/*---------------*/
+
+.message-form {
+    display: grid;
+/*    grid-template-columns: 1fr 50px;*/;
+    position: relative;
+    margin: 0 4%;
+}
+
+.message-form input {
+    border: none;
+    padding-left: 20px;
+    background: white;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.17);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    transition: .1s ease-in-out
+}
+
+.message-form input:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.17);
+}
+
+.message-form button {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 11px;
+}
+
+.message-form button img {
+    width: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

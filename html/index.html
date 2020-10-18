@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xChat</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/chat.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDt_EU0jRoJ7FFdk4L9UcIGlUwaD3HTe4c",
+            authDomain: "message-app-d62d2.firebaseapp.com",
+            databaseURL: "https://message-app-d62d2.firebaseio.com",
+            projectId: "message-app-d62d2",
+            storageBucket: "message-app-d62d2.appspot.com",
+            messagingSenderId: "823878440898",
+            appId: "1:823878440898:web:19a7c94487aea6bf"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+    <script src="../js/components.js"></script>
+    <script src="../js/controller.js"></script>
+    <script src="../js/view.js"></script>
+    <script src="../js/model.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
